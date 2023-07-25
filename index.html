@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="panel_control">
+        <div class="move">
+            <button name="move" class="DiagonalTL">↖</button>
+            <button name="move" class="Top">↑</button>
+            <button name="move" class="DiagonalTR">↗</button>
+            <button name="move" class="Left">←</button>
+            <button name="action" class="Attack">⚔️</button>
+            <button name="move" class="Right">→</button>
+            <button name="move" class="DiagonalDL">↙</button>
+            <button name="move" class="Down">↓</button>
+            <button name="move" class="DiagonalDR">↘</button>
+        </div>
+        <div class="actions">
+            <button name="action" class="Death">☠️</button>
+            <button class="stopMove">⛔</button>
+            <button name="selectUnit">👆</button>
+        </div>
+        <div class="colors">
+            <button name="color" class="red"></button>
+            <button name="color" class="blue"></button>
+            <button name="color" class="green"></button>
+            <button name="color" class="purple"></button>
+            <button name="color" class="orange"></button>
+            <button name="color" class="white"></button>
+            <button name="color" class="yellow"></button>
+            <button name="color" class="pink"></button>
+            <button name="color" class="black"></button>
+        </div>
+    </div>
+    <script type="module" src="Unit.js"></script>
+    <script type="module" src="script.js"></script>
+    <style>
+        *{
+            cursor: url('assets/cursor/human_cursor.png'), pointer;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .panel_control {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel_control>button {
+            margin-left: 30px;
+        }
+
+        button {
+            height: 4vw;
+            width: 4vw;
+            text-align: center;
+            border: none;
+            transition: .5s;
+        }
+
+        button:hover {
+            background-color: rgb(168, 168, 168);
+            transition: .5s;
+        }
+
+        .move {
+            width: 14vw;
+            height: 14vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .colors {
+            margin-top: 4vw;
+        }
+
+        .colors>button {
+            height: 4vw;
+            width: 4vw;
+            border: none;
+        }
+
+        .colors>button:hover {
+            border: 1px solid;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .active{
+            background-color: rgb(168, 168, 168);
+
+        }
+    </style>
+</body>
+
+</html>
